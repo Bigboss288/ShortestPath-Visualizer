@@ -1,4 +1,5 @@
 {
+  "homepage": "https://shortest-path-visualizer-eta.vercel.app/",
   "name": "shortest_path_visualizer",
   "version": "0.1.0",
   "private": false,
