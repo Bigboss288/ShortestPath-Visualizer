@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import './CSS/home.css'
 import './CSS/navbar.css'
+import './CSS/modal.css'
 import { dijkstra, getNodesInShortestPathOrder } from "../Algorithms/Dijkstra";
 import Navbar from "./Navbar";
 import Node from "./Node";
@@ -104,7 +105,7 @@ const Home = () => {
 
   function visualizeDijkstra() {
     if(!startNodeIsSelected || !endNodeInSelected){
-      document.querySelector(".home-alert").style.display = 'flex'
+      document.querySelector(".modal-alert").style.display = 'flex'
     }
    else{
     document.querySelector(".navbar-reset").style.display = 'block'

@@ -21,7 +21,7 @@ const Navbar = (props) => {
         </div>
         <div className='navbar-right'>
           <div className='navbar-algorithm-button-container'>
-            <button className='navbar-button navbar-dijkstra' onClick={props.dijkstra}>Visualize Dijkstra</button>
+            <button className='navbar-button navbar-dijkstra' onClick={props.dijkstra}>Visualize</button>
             <button className='navbar-button navbar-reset' onClick={()=> Reset()}>
               <span className='navbar-button-reset-span'></span>
               Reset
