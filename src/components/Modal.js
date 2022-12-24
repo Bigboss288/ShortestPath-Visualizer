@@ -1,18 +1,18 @@
 import React from "react";
 import "./CSS/modal.css"
 
-const Modal = () => {
+const Modal = (props) => {
 
     function closeModal(){
         document.querySelector(".modal-alert").style.display = 'none'
-       }
+       } 
        
   return (
     <div>
-      <div className="modal-alert">
-        <span className="modal-alert-icon"></span>
+      <div className={`modal-alert ${props.className}`}>
+        <span className={`modal-alert-icon ${props.className}-icon`}></span>
         <div className="modal-alert-title">
-          Select Start node and End Node to continue...
+          {props.title}
         </div>
         <button className="modal-alert-close" onClick={() => closeModal()}>
           &#x2716;

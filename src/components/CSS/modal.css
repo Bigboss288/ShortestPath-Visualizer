@@ -8,9 +8,18 @@
     min-width: 230px;
     width: 45%;
     padding: 10px;
-    background-color: #ffff99;
     animation: popup 0.5s linear forwards;
+    box-shadow: 1px 5px 8px rgba(0,0,0,20%);
     display: none;
+  }
+
+  .warning{
+    background-color: #ffff99;
+   
+  }
+
+  .information{
+    background-color: white;
   }
   
   @keyframes popup {
@@ -24,33 +33,46 @@
       }
   }
   
-  .modal-alert-icon {
-    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAABS0lEQVRIie2VsUoDQRRFD2LQRiwsLQUbwcbKwjpaaKH4AfoF6fULUusX6BektLC3sEiEgBoEIyoKKTSNRs1a+AaGZHb3TTIjKXLhNvvu3DMzsLsw1ohrC3gSb/4XdA5oAYm4Jc+i69iCGh/Fhi4BXw7wN7AcE3zmgBqfx4LuZECNt0NDp4BbBfgOmA4JPlRAjQ9CQeeBdk95A9gVN3pmbVkztE7pP1XVmtcc85NhoatA11F8bWVuHPMusDYodAK4cJQmwL2Va6ZkLqXDW/sphQnwYuVeM3J7vtAZ/n4AaYVvVvY9Z4OzPuByRlkCdIAVcScnW9ZCF4CPnDIffwKLGnBFWfgs1mQredCisqgKTAIF4Eq5ppgGLQB1ZUlN8j7guuT7VFIWDHLVxiUXOOv1CeVHA7O/LD+u3QSWk7EBPBDvtE1gPdKBxhpB/QI7nzRjC3f9pwAAAABJRU5ErkJggg==);
-    background-size: contain;
+  .modal-alert-icon{
     position: absolute;
-    top: 19px;
-    left: 12px;
+    top: 50%;
+    left: 4%;
+    transform: translateY(-50%);
     height: 17px;
     width: 17px;
+  }
+
+  .warning-icon{
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAABS0lEQVRIie2VsUoDQRRFD2LQRiwsLQUbwcbKwjpaaKH4AfoF6fULUusX6BektLC3sEiEgBoEIyoKKTSNRs1a+AaGZHb3TTIjKXLhNvvu3DMzsLsw1ohrC3gSb/4XdA5oAYm4Jc+i69iCGh/Fhi4BXw7wN7AcE3zmgBqfx4LuZECNt0NDp4BbBfgOmA4JPlRAjQ9CQeeBdk95A9gVN3pmbVkztE7pP1XVmtcc85NhoatA11F8bWVuHPMusDYodAK4cJQmwL2Va6ZkLqXDW/sphQnwYuVeM3J7vtAZ/n4AaYVvVvY9Z4OzPuByRlkCdIAVcScnW9ZCF4CPnDIffwKLGnBFWfgs1mQredCisqgKTAIF4Eq5ppgGLQB1ZUlN8j7guuT7VFIWDHLVxiUXOOv1CeVHA7O/LD+u3QSWk7EBPBDvtE1gPdKBxhpB/QI7nzRjC3f9pwAAAABJRU5ErkJggg==);
+    background-size: contain;
+  }
+
+  .info-icon{
+    background: url(../Images/icons8-about-64.png);
+    background-size: contain;
   }
   
   .modal-alert-title {
     font-size: 13px;
     margin-left: 2rem;
+    margin-right: 1.5rem;
   }
   
   .modal-alert-close {
     width: 1.2rem;
     height: 1.2rem;
     padding: 2px;
-    margin: 3px 10px;
-    margin-left: 30px;
+    /* margin: 3px 10px; */
+    /* margin-left: 30px; */
     line-height: 0px;
     border-radius: 50px;
     outline: none;
     border: none;
     background: none;
     cursor: pointer;
+    position: fixed;
+    top: 29%;
+    left: 89%;
   }
   
 

@@ -19,6 +19,11 @@ const Home = () => {
   const [startNodeIsSelected, setStartNode] = useState(false);
   const [endNodeInSelected, setEndNode] = useState(false);
   const [count,setCount] = useState(0)
+  const [className,setClassName] = useState("")
+  const [title,setTitle] = useState("")
+
+  const warning_title = "Select Start node and End Node to continue..."
+  const visual_title = "Visualizing Dijkstra's algorithm, which is an algorithm for finding the shortest paths between nodes in a graph."
 
   useEffect(() => {
     const initialGrid = getInitialGrid();
@@ -105,13 +110,22 @@ const Home = () => {
 
   function visualizeDijkstra() {
     if(!startNodeIsSelected || !endNodeInSelected){
+      setClassName("warning")
+      setTitle(warning_title)
       document.querySelector(".modal-alert").style.display = 'flex'
     }
    else{
+    setClassName("info")
+    setTitle(visual_title)
+    document.querySelector(".modal-alert").style.display = 'flex'
+
+    setTimeout(()=>{
+      document.querySelector(".modal-alert").style.display = 'none'
+    },5000)
+
     document.querySelector(".navbar-reset").style.display = 'block'
     document.querySelector('.start_node').style.display = 'none'
     document.querySelector('.end_node').style.display = 'none'
-    document.querySelector('.home-algo-title').style.display = 'block'
     const startNode = grid[START_NODE_ROW][START_NODE_COL];
     const finishNode = grid[FINISH_NODE_ROW][FINISH_NODE_COL];
     const visitedNodesInOrder = dijkstra(grid, startNode, finishNode);
@@ -132,9 +146,10 @@ const Home = () => {
               <div className='home-timer-container'>
                   <span>Time : {count} [1 Time = 1 Block]</span>
                  </div>
-
-              <div className="home-algo-title">Visualizing Dijstra's algorithm</div>
-              <Modal/>
+              <div>
+                <Modal className={className}
+                       title={title}/>
+              </div>
               
       <div className="grid">
         {grid.map((row, rowIdx) => {

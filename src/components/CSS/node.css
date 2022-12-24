@@ -9,11 +9,13 @@
   .node-finish {
     background: url(../Images/icons8-filled-circle-64.png);
     background-size: contain;
+    background-repeat: no-repeat;
   }
   
   .node-start {
     background: url(../Images/pyramid_img.png);
     background-size: contain;
+    background-repeat: no-repeat;
   }
 
   .node-wall {
